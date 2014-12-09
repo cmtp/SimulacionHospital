@@ -82,7 +82,7 @@ public class PanelSimulacion extends JPanel implements ActionListener{
         setLayout(null);
         setBackground(Color.BLACK);
         URL url=this.getClass().getResource("/Imagenes/fcyt.PNG");
-        URL url1=this.getClass().getResource("/Imagenes/fondo_negro1.jpg");
+        URL url1=this.getClass().getResource("/Imagenes/hospitalGeneral.png");
         URL url2=this.getClass().getResource("/Imagenes/fondo_datos.jpg");
         label_fcyt=new JLabel(new ImageIcon(url));
         label_fcyt.setLayout(null);
@@ -111,14 +111,13 @@ public class PanelSimulacion extends JPanel implements ActionListener{
         panelDatos.setLayout(null);
         panelDatos.setBounds(865,5,350,740);//(865,5,300,630)
         panelDatos.setBackground(new Color(0,10,0,4));
-        label_labadero=new JLabel("Selecione N° de Labaderos");
+        label_labadero=new JLabel("Selecione N° de camillas a Incrementar");
         cb_labadero = new JComboBox();
         cb_labadero.addItem("1");
         cb_labadero.addItem("2");
         cb_labadero.addItem("3");
         cb_labadero.addItem("4");
         cb_labadero.addItem("5");
-        cb_labadero.addItem("6");
         cb_labadero.setBounds(40, 183, 50, 20);//(20, 183, 50, 20)
         label_labadero.setBounds(100,183,200,20);
         label_labadero.setVisible(true);
@@ -128,7 +127,7 @@ public class PanelSimulacion extends JPanel implements ActionListener{
         cb_encerado = new JComboBox();
         cb_encerado.addActionListener(this);
         cb_encerado.setBounds(40, 228, 50, 20);
-        label_encerado=new JLabel("seleccione N° de enceradores");
+        label_encerado=new JLabel("seleccione N° de Recepcionistas");
         label_encerado.setBounds(100,228,200,20);
         cb_encerado.addItem("1");
         cb_encerado.addItem("2");
@@ -140,25 +139,25 @@ public class PanelSimulacion extends JPanel implements ActionListener{
         
         setLayout(null);
         setBackground(Color.black);
-        cb_cajero = new JComboBox();
-        label_cajero=new JLabel("Recepcionista");
-        cb_cajero.addActionListener(this);
-        cb_cajero.setBounds(40, 320, 50, 20);
-        label_cajero.setBounds(100, 320, 200, 20);
-        cb_cajero.setBackground(Color.white);
-        cb_cajero.setBorder(BorderFactory.createEmptyBorder());
-        cb_cajero.setFont(new Font("Helvetica", Font.BOLD, 10));
-        cb_cajero.setFont(null);
-        cb_cajero.addItem("1");
-        cb_cajero.setVisible(true);
-        cb_cajero.enable(true);
-        label_cajero.setVisible(true);
-        panelDatos.add(cb_cajero);
-        panelDatos.add(label_cajero);
+        //cb_cajero = new JComboBox();
+        //label_cajero=new JLabel("Recepcionista");
+        //cb_cajero.addActionListener(this);
+        //cb_cajero.setBounds(40, 320, 50, 20);
+        //label_cajero.setBounds(100, 320, 200, 20);
+        //cb_cajero.setBackground(Color.white);
+        //cb_cajero.setBorder(BorderFactory.createEmptyBorder());
+        //cb_cajero.setFont(new Font("Helvetica", Font.BOLD, 10));
+        //cb_cajero.setFont(null);
+        //cb_cajero.addItem("1");
+        //cb_cajero.setVisible(true);
+        //cb_cajero.enable(true);
+        //label_cajero.setVisible(true);
+        //panelDatos.add(cb_cajero);
+        //panelDatos.add(label_cajero);
         
         cb_c_aceite = new JComboBox();
         
-        label_c_aceite=new JLabel("seleccione N° de controles");
+        /*label_c_aceite=new JLabel("seleccione N° de controles");
         cb_c_aceite.setBounds(40, 273, 50, 20);
         label_c_aceite.setBounds(100,273,200,20);
         cb_c_aceite.addItem("1");
@@ -167,22 +166,26 @@ public class PanelSimulacion extends JPanel implements ActionListener{
         cb_c_aceite.addItem("4");
         cb_c_aceite.setVisible(true);
         panelDatos.add(cb_c_aceite);
-         panelDatos.add(label_c_aceite);
+         panelDatos.add(label_c_aceite);*/
         this.add(panelDatos);
     }
    
     
     public void actionPerformed(ActionEvent e) {
         if(e.getSource().equals(b_aceptar)){
-                int n_control_a = Integer.parseInt(cb_c_aceite.getSelectedItem().toString());
-                int n_cajero =Integer.parseInt(cb_cajero.getSelectedItem().toString());
-                  int n_labaderos = Integer.parseInt(cb_labadero.getSelectedItem().toString());
-                  int n_enceradores = Integer.parseInt(cb_encerado.getSelectedItem().toString());
-                simu=new VentanaSimulacion(n_control_a,n_cajero,n_labaderos,n_enceradores);         
-                simu.setVisible(true);
+                //int n_control_a = Integer.parseInt(cb_c_aceite.getSelectedItem().toString());
+                //int n_cajero =Integer.parseInt(cb_cajero.getSelectedItem().toString());
+                  //int n_labaderos = Integer.parseInt(cb_labadero.getSelectedItem().toString());
+                  //int n_enceradores = Integer.parseInt(cb_encerado.getSelectedItem().toString());
+                //simu=new VentanaSimulacion(n_control_a,n_cajero,n_labaderos,n_enceradores);         
+                  //vista.VentanaSimulacion v=new vista.VentanaSimulacion();
+                  //v.setVisible(true);
+                //simu.setVisible(true);
+            VentanaSimulacion v=new VentanaSimulacion(1, 2, 2, 1);
+            v.setVisible(true);
                 
         }else if(e.getSource().equals(b_cancelrar)){
-            int o=JOptionPane.showConfirmDialog(this, "Esta seguro que desea salir del sistema de Simulacion Elite Car Wash?");
+            int o=JOptionPane.showConfirmDialog(this, "Esta seguro que desea salir del sistema de Simulacion del Hospital?");
             if(o==JOptionPane.OK_OPTION){
                 System.exit(3);
             }

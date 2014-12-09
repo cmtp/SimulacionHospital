@@ -34,11 +34,11 @@ public class Prueba extends Thread{
      
     public void run(){
         JWindow w= new JWindow();
-        URL url=this.getClass().getResource("/imagenesINT/inicioAuto.gif");
-        JLabel imagen=new JLabel(new ImageIcon(url));// poner una imagen para el cuadro pequeño
+        //URL url=this.getClass().getResource("/imagenesINT/inicioAuto.gif");
+        //JLabel imagen=new JLabel(new ImageIcon(url));// poner una imagen para el cuadro pequeño
         //imagen.repaint(); 
         //JLabel imagen=new JLabel("Hola Mundo");
-        w.add(imagen,BorderLayout.CENTER);
+        //w.add(imagen,BorderLayout.CENTER);
         JProgressBar bar=new JProgressBar(0,800);
         bar.setString("cargando Simulacion Hospital .....");
         bar.setStringPainted(true);

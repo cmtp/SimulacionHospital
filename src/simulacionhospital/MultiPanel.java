@@ -34,14 +34,14 @@ public class MultiPanel extends JPanel {
         pi = new PanelInfo();
  //               panelInicio = new Inicio();
         simulacion = new PanelSimulacion();
-        ayuda = new PanelHelp();
+        //ayuda = new PanelHelp();
         this.mostrarPanelEntrada();
     }   
     
     public void mostrarPanelEntrada() {
         pi.setVisible(false);
         pe.setVisible(true);
-        ayuda.setVisible(false);
+        //ayuda.setVisible(false);
         add(pe,"Center");
     }
     
@@ -52,7 +52,7 @@ public class MultiPanel extends JPanel {
   //      panelInicio.setVisible(false);
         simulacion.setVisible(false);
         pi.mostrarInfo();
-        ayuda.setVisible(false);
+        //ayuda.setVisible(false);
         add(pi,"Center");
     }
         public void mostrarPanelInicio()
@@ -61,7 +61,7 @@ public class MultiPanel extends JPanel {
           pi.setVisible(false);
        // panelInicio.mostrar();
         simulacion= new PanelSimulacion();
-        ayuda.setVisible(false);
+        //ayuda.setVisible(false);
         add(simulacion,"Center");
         }
         
@@ -71,8 +71,8 @@ public class MultiPanel extends JPanel {
             pi.setVisible(false);
            // panelInicio.setVisible(false);
             simulacion.setVisible(false);
-            ayuda.setVisible(true);
-            add(ayuda,"Center");
+            //ayuda.setVisible(true);
+            //add(ayuda,"Center");
         }
         
 /*        public void mostrarVentanaHelp()

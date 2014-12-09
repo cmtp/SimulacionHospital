@@ -30,7 +30,7 @@ public class PanelEntrada extends JPanel{
     
     /*Metodo que introduce las imagenes al panel*/
 	public void fondo(){
-            URL url=this.getClass().getResource("/imagenesINT/fondoEntradaa.jpg");
+            URL url=this.getClass().getResource("/imagenesINT/hospital.png");
 	    ImageIcon ima = new ImageIcon(url);
 	    imagenFondo = new JLabel(new ImageIcon(ima.getImage().getScaledInstance(1250,700, 1)));
 		imagenFondo.setVisible(true);

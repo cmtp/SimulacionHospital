@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=
+comment0.target=PruebaMatematica()
+comment0.text=\r\n\ Constructor\ de\ objetos\ de\ la\ clase\ PruebaMatematica\r\n
+comment1.params=num
+comment1.target=void\ contadorVariable(double)
+comment1.text=\r\n\ Metodo\ contadorVariables\ generadas\ con\ llamada\ al\r\n\ \ \ \ \ \ \ \ metodo\ var.exponencial.\r\n\ \ \ \ \ \ \ \ \r\n\ @return\ \ \ \ \ imprime\ valores\ da\ una\ variable\ exponencial\r\n
+numComments=2

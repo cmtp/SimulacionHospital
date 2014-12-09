@@ -33,9 +33,9 @@ public class PanelInfo extends JPanel{
 		Color color=Color.white;
 
 		Font font=new Font("Vivaldi", Font.ITALIC, 40);
-                URL url=this.getClass().getResource("/imagenesINT/fondoInform.jpg");
-		ImageIcon ima1 =new ImageIcon(url);
-	    imagenFondo1 = new JLabel(new ImageIcon(ima1.getImage().getScaledInstance(1250,700, 1)));
+                //URL url=this.getClass().getResource("/imagenesINT/fondoInform.jpg");
+		//ImageIcon ima1 =new ImageIcon(url);
+	    imagenFondo1 = new JLabel(/*new ImageIcon(ima1.getImage().getScaledInstance(1250,700, 1))*/);
 		imagenFondo1.setBounds(0,0,1250,700);
 		imagenFondo1.setBackground(new Color(3,58,5));
 		imagenFondo1.setVisible(true);

@@ -6,6 +6,8 @@
 
 package vista;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author marcelo
@@ -17,6 +19,7 @@ public class VentanaSimulacion extends javax.swing.JFrame {
      */
     public VentanaSimulacion() {
         initComponents();
+        setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
     }
 
     /**

@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=
+comment0.target=GeneCongruMixto()
+comment0.text=\r\n\ Constructor\ para\ objetos\ de\ clase\ GeneCongruMixto\r\n
+comment1.params=
+comment1.target=double\ getNumAleatorio()
+comment1.text=\r\n\ Metodo\ de\ generacion\ de\ numeros\ aleatorios\r\n\ \r\n\ @parametros\ \ Llada\ a\ metodo\ de\ la\ libreria\ Math\r\n\ @retorna\ \ \ \ \ Numero\ aleatorio\ generado\ \r\n
+numComments=2

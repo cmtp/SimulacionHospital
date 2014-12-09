@@ -26,10 +26,10 @@ public class PanelOpciones extends JPanel implements ActionListener, MouseListen
     private void setup() {
         Dimension dimension = new Dimension(130,4);
         this.setLayout(new GridLayout(5,1));
-        this.setBackground(Color.BLACK);
+        //this.setBackground(Color.BLACK);
         
         //boton de inicio
-        URL url=this.getClass().getResource("/imagenesINT/ingresar1.gif");
+        URL url=this.getClass().getResource("/imagenesINT/ingresar1.jpg");
         URL url1=this.getClass().getResource("/imagenesINT/volver1.gif");
         URL url2=this.getClass().getResource("/imagenesINT/ayuda1.gif");
         URL url3=this.getClass().getResource("/imagenesINT/info1.gif");
@@ -39,17 +39,19 @@ public class PanelOpciones extends JPanel implements ActionListener, MouseListen
         URL url7=this.getClass().getResource("/imagenesINT/fondoEntradaa.jpg");
         URL url8=this.getClass().getResource("/imagenesINT/fondoEntradaa.jpg");
         inicio = new JButton(new ImageIcon(url));
+        //inicio=new JButton("Inicio");
         inicio.setToolTipText("Inicio de aplicacion");
         inicio.setPreferredSize(dimension);
         inicio.addActionListener(this);
         inicio.addMouseListener(this);
         inicio.setBorderPainted(false);
-            inicio.setFocusPainted(false);
+        inicio.setFocusPainted(false);
         inicio.setContentAreaFilled(false);
         inicio.setCursor(new Cursor(Cursor.HAND_CURSOR));
         
         //boton musica
         musica = new JButton(new ImageIcon(url1));
+        //musica=new JButton("Volver");
         musica.setToolTipText("Volver");
         musica.setPreferredSize(dimension);
         musica.addActionListener(this);
@@ -61,6 +63,7 @@ public class PanelOpciones extends JPanel implements ActionListener, MouseListen
         
         //boton ayuda
         ayuda = new JButton(new ImageIcon(url2));
+        //ayuda =new JButton("Ayuda");
         ayuda.setToolTipText("Ayuda");
         ayuda.setPreferredSize(dimension);
         ayuda.addActionListener(this);
@@ -72,6 +75,7 @@ public class PanelOpciones extends JPanel implements ActionListener, MouseListen
         
         //boton informacion
         info = new JButton(new ImageIcon(url3));
+        //info = new JButton("Info");
         info.addActionListener(this);
         info.addMouseListener(this);
         info.setToolTipText("Información de desarrolladores");
@@ -84,6 +88,7 @@ public class PanelOpciones extends JPanel implements ActionListener, MouseListen
         
         //boton salir
         salir = new JButton(new ImageIcon(url4));
+        //salir=new JButton("Salir");
         salir.addActionListener(this);
         salir.addMouseListener(this);
         salir.setToolTipText("Salir");
@@ -135,7 +140,7 @@ public class PanelOpciones extends JPanel implements ActionListener, MouseListen
         URL url1=this.getClass().getResource("/imagenesINT/volver2.gif");
         URL url2=this.getClass().getResource("/imagenesINT/ayuda2.gif");
         URL url3=this.getClass().getResource("/imagenesINT/info2.gif");
-        URL url4=this.getClass().getResource("/imagenesINT/ingresar2.gif");
+        URL url4=this.getClass().getResource("/imagenesINT/ingresar2.jpg");
         if( o == salir)
             salir.setIcon(new ImageIcon(url));
 
@@ -150,7 +155,6 @@ public class PanelOpciones extends JPanel implements ActionListener, MouseListen
             
         else if( o == inicio) 
             inicio.setIcon(new ImageIcon(url4));
-        
     }
 
     public void mouseExited(MouseEvent e) {
@@ -159,7 +163,7 @@ public class PanelOpciones extends JPanel implements ActionListener, MouseListen
         URL url1=this.getClass().getResource("/imagenesINT/volver1.gif");
         URL url2=this.getClass().getResource("/imagenesINT/ayuda1.gif");
         URL url3=this.getClass().getResource("/imagenesINT/info1.gif");
-        URL url4=this.getClass().getResource("/imagenesINT/ingresar1.gif");
+        URL url4=this.getClass().getResource("/imagenesINT/ingresar1.jpg");
         if( o == salir){
             salir.setIcon(new ImageIcon(url));    
         }else if( o == musica){

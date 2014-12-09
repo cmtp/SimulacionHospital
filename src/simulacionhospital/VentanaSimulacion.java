@@ -24,12 +24,35 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author marcelo
  */
-public class VentanaSimulacion extends JFrame implements ActionListener{
+/**
+ *
+ * @author  suleyma,marlene,reinaldo,karen,judith
+ * 
+ */             
+    
+import javax.swing.*;
+import javax.swing.border.TitledBorder;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 
-    JSlider slider;
+import java.awt.Cursor;
+import java.awt.PrintJob;
+import java.awt.Toolkit;
+import java.awt.event.*;
+import java.awt.Color;
+import java.util.Date;
+import java.util.Properties;
+
+import javax.swing.table.DefaultTableModel;
+
+public class VentanaSimulacion extends JFrame implements ActionListener{
+	
+	
+	
+	JSlider slider;
     JLabel label;
     
-    //private Panel123 panel;
+    private Panel123 panel;
     private JMenuBar menus;
     private JMenu Archivo;
     private JMenu Editar;
@@ -48,9 +71,9 @@ public class VentanaSimulacion extends JFrame implements ActionListener{
     private int cajero;
     private int labadero ;
     private int encerado;
-	private static int slindervalue;
-	private boolean listo=false;
-	private Thread hilo;
+    private static int slindervalue;
+    private boolean listo=false;
+    private Thread hilo;
     private boolean run=false;
     private int contador;
     private JPanel panel1 = new JPanel(); 
@@ -85,30 +108,12 @@ public class VentanaSimulacion extends JFrame implements ActionListener{
       ///////////////////////////////////////////////////////////////////////////////////////////////////////////
       
     private double datosParam[]={45,2,0.1,1,3};
-    //public static Accion accion = new Accion();
-    //public static Estacionamiento_I esta =new Estacionamiento_I();
-    //public static Estacion_Lavado lavadero =new Estacion_Lavado();
-    //public static Estacionamiento_II estaII =new Estacionamiento_II();
-    //public static Estacion_Control control =new Estacion_Control();
+    public static Accion accion = new Accion();
+    public static Estacionamiento_I esta =new Estacionamiento_I();
+    public static Estacion_Lavado lavadero =new Estacion_Lavado();
+    public static Estacionamiento_II estaII =new Estacionamiento_II();
+    public static Estacion_Control control =new Estacion_Control();
     private Thread thread;
-    
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
-    public VentanaSimulacion(int control_a,int cajero,int labadero,int encerado) {
-		this.control_a=control_a;
-		this.cajero=cajero;
-		this.labadero = labadero;
-		this.encerado = encerado;
-    	
-        //establecerPropiedades();
-        //establecerComponentes();
-        //anadirEventos();
-        //anadirInterfazAnimacion();
-    }
-    /*
    
     
     
@@ -126,7 +131,7 @@ public class VentanaSimulacion extends JFrame implements ActionListener{
   
     public void establecerPropiedades(){
 
-      setTitle("Elite Car Wash 2.1 ");
+      setTitle("Simulacion del hospital ");
       setLayout(null);
       setBounds(0, 0, 1340, 710);
       //setUndecorated(true);
@@ -269,7 +274,7 @@ public class VentanaSimulacion extends JFrame implements ActionListener{
 
      // label_atendidas.setBounds(10, 40, 230, 20);
       //p_infoGeneral.add(label_atendidas);
-     /*           
+                
       tiempo.setText(" Tiempo Simulado: ");
       tiempo.setBounds(5, 25, 230, 20);
       p_cronometro.add(tiempo);
@@ -304,16 +309,16 @@ public class VentanaSimulacion extends JFrame implements ActionListener{
     }
       ////////////////////////*****************************///////////////////////////////     
     
-	/*public void crearPanel(){
+	public void crearPanel(){
 		panel = new Panel123(accion,control_a,cajero,labadero,encerado,esta,lavadero,estaII,control);
 		panel.setLayout(null);
 		panel.setBounds(10, -10, 1190,700);
 		p_simulacion.add(panel);
     }
-     /*  
+       
     public static void actualizarInformacion(){
         /*	
-            *//*
+            */
             tiempo.setText(" Tiempo Simulado:" +accion.tiempo/3600+":"+accion.tiempo%60);
             
     }
@@ -378,7 +383,7 @@ public class VentanaSimulacion extends JFrame implements ActionListener{
 		                }
 	            	}
 	            });
-                hilo.start();*//*
+                hilo.start();*/
            }else{
         	   System.out.println("start");
                 //inter.stop();
@@ -420,7 +425,7 @@ public class VentanaSimulacion extends JFrame implements ActionListener{
     {
         public void actionPerformed(ActionEvent e)
         {
-           Tabla t = new Tabla(accion);  
+           //Tabla t = new Tabla(accion);  
         }
     }
     
@@ -428,8 +433,8 @@ public class VentanaSimulacion extends JFrame implements ActionListener{
     {
         public void actionPerformed(ActionEvent e)
         {
-            VentanaReporte rep= new VentanaReporte(accion);
-             rep.setVisible(true);
+            //VentanaReporte rep= new VentanaReporte(accion);
+            // rep.setVisible(true);
         }
     }
     
@@ -448,8 +453,7 @@ public class VentanaSimulacion extends JFrame implements ActionListener{
 				System.exit(0);
 			}
 		}else if (opcion.equals("Acerca de este")) {
-			//JOptionPane.showMessageDialog(this,"Para mas informacin contactarse con: \n"+"sejas" +
-					//	" \n","Acerca de Grupo#2", JOptionPane.INFORMATION_MESSAGE);
+			System.out.println();
 	     }else if (opcion.equals("Nuevo")) {
 	        new VentanaSimulacion(control_a,cajero,labadero,encerado);
 	        
@@ -486,5 +490,11 @@ public class VentanaSimulacion extends JFrame implements ActionListener{
 			new Autor().setVisible(true);
 		}
 	     
-	}*/
+	}
+        public static void main(String args[])
+        {
+            VentanaSimulacion v=new VentanaSimulacion(1, 2, 2, 1);
+            v.setVisible(true);
+        }
+
 }
